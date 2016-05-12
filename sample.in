@@ -1,0 +1,21 @@
+ADD_USER A A@foo.com
+ADD_USER B B@foo.com
+ADD_USER C C@foo.com
+ADD_USER D D@foo.com
+ADD_SCORE A@foo.com C1 100.0
+ADD_SCORE A@foo.com C2 100.0
+ADD_SCORE B@foo.com C1 100.0
+ADD_SCORE B@foo.com C2 100.0
+ADD_SCORE C@foo.com C1 100.0
+ADD_SCORE C@foo.com C2 100.0
+ADD_SCORE D@foo.com C1 100.0
+ADD_SCORE D@foo.com C2 100.0
+TOP_K 5
+K_ABOVE C@foo.com 2
+K_BELOW C@foo.com 2
+ADD_SCORE A@foo.com C3 50.0
+TOP_K 4
+K_ABOVE A@foo.com 2
+K_BELOW A@foo.com 2
+K_BELOW B@foo.com 4
+BULK_FETCH A@foo.com B@foo.com
